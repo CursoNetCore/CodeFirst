@@ -15,6 +15,7 @@ namespace CodeFirst.Models
         [StringLength(50,MinimumLength =3, ErrorMessage ="longitud invalida")]
         public string Nombre { get; set; }
         [StringLength(255, ErrorMessage = "longitud invalida")]
+        [Display(Name="Descripción")]
         public string Descripcion { get; set; }
         public bool? Estado { get; set; }
         public virtual ICollection<Producto> Producto { get; set; }
