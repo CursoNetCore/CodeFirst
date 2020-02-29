@@ -29,6 +29,11 @@ namespace CodeFirst.Models
                 entity.ToTable("categoria");
                 entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
 
+                entity.Property(e => e.Codigo)
+                    .HasColumnName("codigo")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Nombre)
                     .HasColumnName("nombre")
                     .IsRequired()
